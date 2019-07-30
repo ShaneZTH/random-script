@@ -24,10 +24,6 @@ with open(path+'input.txt','r') as inFile, open(path+'output.txt','w') as outFil
 		print('gmail #', count)
 		outFile.write(adder(line))
 		
-
-
-test = 'torres.earlene@gmail.com:::Stevie24082408:::181.214.238.165:65045 '
-
 #print('\nret is ', adder(test))
 
 
