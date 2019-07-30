@@ -3,12 +3,33 @@ import re
 colon = ':::'
 count = 0
 proxy = [50]
+gmail = [50]
+password = 'ShaneGM'
 
 
+# read gmails from given txt file
+#
+def readGmails():
+	index = 0
+	with open(path + 'gmails.txt', 'r') as gmails:
+		for line in gmails.readlines():
+			print('gmail is ', line)
+			global gmail
+			if line is None:
+				print('line is null\n')
+			else:
+				print('index is ', index)
+				gmail.append(line)
+				index+=1
+	return True;
+
+
+# read proxies from given txt file
+#
 def readProxies():
 	#if(str == '\n'): return ''
 
-	index = 1
+	index = 0
 	with open(path + 'newProxies.txt', 'r') as newProxies:
 		for line in newProxies.readlines():
 			print('proxy is ', line)
@@ -24,7 +45,9 @@ def readProxies():
 	return True;
 
 
-def changer(str):
+# Update proxies in AYCD's format
+#
+def updater(str):
     if(str == '\n'): return ''
    
     print('input is ', str)
@@ -35,20 +58,23 @@ def changer(str):
     return (ret[0]+colon+ret[1]+colon+colon+proxy[count+1])
 
 #####
+# Main func
+####
 
 path = '../../Vim_Workspace/proxyFiles/'
-#input = open(path + 'input.txt', 'r')
-#newProxies = open(path + 'newProxies.txt', 'r');
-#output = open(path + 'output.txt', 'a')
+output = open(path + 'output.txt', 'a')
 
 if(readProxies()):
 	with open(path+'input.txt','r') as inFile, open(path+'output.txt','w') as outFile:
 		for line in inFile.readlines():
-			print('gmail #', count)
-			outFile.write(changer(line))
+			if(line != '\n'):
+				print('gmail #', count)
+				res = updater(line)
+				print('output is ', res)
+				print(' ----------- \n')
+				outFile.write(res)
 
 #print('\nret is ', adder(test))
-
 
 
 
