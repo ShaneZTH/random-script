@@ -1,7 +1,7 @@
 import re
 
 colon = ':::'
-count = 0;
+count = 0
 
 def adder(str):
 	if(str == '\n'): return ''

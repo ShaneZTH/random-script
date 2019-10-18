@@ -36,7 +36,6 @@ def readProxies():
 				print('line is null\n')
 			else:
 				print('index is ', index)
-				#proxy[index] = line
 				proxy.append(line)
 				index+=1
 	

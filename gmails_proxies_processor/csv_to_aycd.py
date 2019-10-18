@@ -32,9 +32,7 @@ def read_from_csv(inFile):
 
       print()
       print(gmails)
-      print(passwords)
-
-
+    
 
 
 
