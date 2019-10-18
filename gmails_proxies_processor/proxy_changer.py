@@ -21,7 +21,7 @@ def readGmails():
 				print('index is ', index)
 				gmail.append(line)
 				index+=1
-	return True;
+	return True
 
 
 # read proxies from given txt file
@@ -39,7 +39,7 @@ def readProxies():
 				proxy.append(line)
 				index+=1
 	
-	return True;
+	return True
 
 
 # Update proxies in AYCD's format
@@ -71,7 +71,9 @@ if(readProxies()):
 				print(' ----------- \n')
 				outFile.write(res)
 
-#print('\nret is ', adder(test))
+
+
+# TODO: this file is objective to be deleted
 
 
 

@@ -57,8 +57,16 @@ def write_to_files(filename):
       out.close      
 
 
+# testing before import to other files
+# TODO: testing with generated data
+# if __name__ == "__main__":
+#     gmails = ['JoFavcela234@gmail.com ', 
+#                'CloraMecsvtas743@gmail.com ']
+#     passwords = ['ShaneGM03', 
+#                   'ShaneGM04']
+#    #  proxies = 
 
-if __name__ == "__main__":
-    test = [1,2,3]
-    set_gmails(test)
-    pass
+#     set_gmails(gmails)
+#     set_passwords(passwords)
+#     set_proxies(proxies)
+#     pass

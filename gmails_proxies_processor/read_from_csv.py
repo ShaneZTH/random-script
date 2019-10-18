@@ -24,25 +24,24 @@ def read_from_csv(inFile):
             print(count)
             print(gmail + ' ' + password)
                  
-
             gmails.append(gmail)
             passwords.append(password)
-         
          count += 1
 
-      print()
-      print(gmails)
-    
+def get_gmails():
+   return gmails
 
+def get_passwords():
+   return passwords
 
+# DOCUMENTS_PATH = '/Users/Shane/Documents/'
+# path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
 
-path = '../../Vim_Workspace/proxyFiles/'
-# output = open(path + 'output.txt', 'a')
+# inCSV = path + "gm_test.csv"
+# read_from_csv(inCSV)
 
-inCSV = path + "gm_test.csv"
-read_from_csv(inCSV)
-print('work is done')
+# # TODO: remove print
+# print(get_gmails())
+# print(passwords)
+# print('work is done')
 
-#Account	New Password	Password	Proxy	Recovery Email	
-#JuleBedcell743@gmail.com	MDSAMRAT_1	MDSAMRAT_1	181.214.238.244:65045		
-#ChantalcMehl743@gmail.com	MDSAMRAT_2	MDSAMRAT_2	181.214.238.245:65045		
