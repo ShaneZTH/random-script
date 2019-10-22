@@ -6,7 +6,6 @@ count = 0
 gmails = []
 passwords = []
 
-
 def read_from_csv(inFile):
    with open(inFile) as csvfile:
       readCSV = csv.reader(csvfile, delimiter=',')
@@ -14,19 +13,15 @@ def read_from_csv(inFile):
       global gmails
       global passwords
       for row in readCSV:
-         if count == 0:
-              # first column
-              print(count) 
-         else:
+         if row is not None:
             gmail = row[0]
             password = row[1]
-            print('')
-            print(count)
-            print(gmail + ' ' + password)
-                 
+            # print('')
+            # print(count)
+            # print(gmail + ' ' + password)        
             gmails.append(gmail)
             passwords.append(password)
-         count += 1
+            count += 1
 
 def get_gmails():
    return gmails
@@ -37,11 +32,7 @@ def get_passwords():
 # DOCUMENTS_PATH = '/Users/Shane/Documents/'
 # path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
 
-# inCSV = path + "gm_test.csv"
-# read_from_csv(inCSV)
 
 # # TODO: remove print
-# print(get_gmails())
-# print(passwords)
-# print('work is done')
+
 

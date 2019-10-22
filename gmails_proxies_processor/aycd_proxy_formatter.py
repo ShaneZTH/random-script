@@ -1,4 +1,5 @@
 import re
+import math
 
 COLON = ':::'
 proxies = []
@@ -19,8 +20,12 @@ def set_proxies(p):
    global proxies
    proxies = p
 
+def get_results():
+   global results
+   return results
+
 def test_print():
-   global gmals, passwords, proxies
+   global gmails, passwords, proxies
    print(gmails)
    print(passwords)
    print(proxies)
@@ -35,29 +40,31 @@ def pair_gmails_proxies():
    p_ratio = 1
    # if rotatation is needed  
    if len(proxies) < len(gmails):
-      p_ratio = ceil(len(gmails)/len(proxies))
+      p_ratio = math.ceil(len(gmails)/len(proxies))
    
    p_count = 1
    p_index = 0
    # pair up
    for i in range(len(gmails)):
+      # print('p_index is ' + str(p_index) + ' p_count is ' + str(p_count))
       results.append(gmails[i]
                      +COLON+passwords[i]
                      +COLON+COLON
                      +proxies[p_index])
       
-      p_count += 1
       if p_count == p_ratio:
          p_count = 1
          p_index += 1
+      else:
+         p_count += 1
 
 # write results to file
 def write_to_files(filename):
-   DOCUMENTS_PATH = '/Users/Shane/Documents/'
-   path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
-   file_path = path + filename
+   # DOCUMENTS_PATH = '/Users/Shane/Documents/'
+   # path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
+   # file_path = path + filename
 
-   with open(file_path,'w') as out:
+   with open(filename,'w') as out:
       for r in results:
          if (r is not None or r != '\n'):
             out.write(r)
