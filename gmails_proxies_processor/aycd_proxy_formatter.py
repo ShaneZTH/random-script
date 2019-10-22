@@ -6,17 +6,25 @@ gmails = []
 passwords = []
 results = []
 
+
 def set_gmails(g):
    global gmails
    gmails = g
 
 def set_passwords(p):
    global passwords
-   gmails = p
+   passwords = p
 
 def set_proxies(p):
    global proxies
    proxies = p
+
+def test_print():
+   global gmals, passwords, proxies
+   print(gmails)
+   print(passwords)
+   print(proxies)
+
 
 def pair_gmails_proxies():
    # Check for valid inputs

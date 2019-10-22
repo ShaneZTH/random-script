@@ -4,16 +4,15 @@ DOCUMENTS_PATH = '/Users/Shane/Documents/'
 path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
 
 
-def readProxies():
+def readProxies(filename):
    global path
    index = 0
    proxies = []
-   with open(path + 'newProxies.txt', 'r', newline='') as newProxies:
+   with open(path + filename, 'r', newline='') as newProxies:
       for line in newProxies.readlines():
-         print('proxy is ', line)
-         if line is None:
-            print('line is null\n')
-         else:
+         # print('proxy is ', line)
+         if line is not None:
+            # print('line is null\n')
             # print('index is ', index)
             proxies.append(line.strip('\n'))
             index+=1

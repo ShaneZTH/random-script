@@ -5,7 +5,7 @@ colon = ':::'
 count = 0
 gmails = []
 passwords = []
-# password = 'ShaneGM'
+
 
 def read_from_csv(inFile):
    with open(inFile) as csvfile:
