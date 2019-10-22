@@ -33,6 +33,7 @@ def get_passwords():
 # path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
 
 
-# # TODO: remove print
+# # TODO: rows with no emails would still be read in, 
+# #   
 
 

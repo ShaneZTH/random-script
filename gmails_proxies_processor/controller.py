@@ -3,7 +3,6 @@ import aycd_proxy_formatter as pf
 import read_from_csv as rc
 import read_from_txt as rt
  
-
 if __name__ == "__main__":
    PATH = './testFiles/'
    rc.read_from_csv(PATH + 'gm.csv')
@@ -12,7 +11,6 @@ if __name__ == "__main__":
    proxies = rt.readProxies(PATH + 'newProxies.txt')
    pf.set_proxies(proxies)
    pf.pair_gmails_proxies()
-
 
    print('---------------')
    # pf.test_print()

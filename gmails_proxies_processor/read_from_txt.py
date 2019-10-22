@@ -1,8 +1,5 @@
 import re
 
-# DOCUMENTS_PATH = '/Users/Shane/Documents/'
-# path = DOCUMENTS_PATH + 'Vim_Workspace/proxyFiles/'
-
 def readProxies(inFile):
    # global path
    # index = 0
@@ -16,6 +13,3 @@ def readProxies(inFile):
             proxies.append(line.strip('\n'))
             # index+=1
    return proxies
-
-
-# print(readProxies())

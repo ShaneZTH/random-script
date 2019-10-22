@@ -67,7 +67,7 @@ def write_to_files(filename):
    with open(filename,'w') as out:
       for r in results:
          if (r is not None or r != '\n'):
-            out.write(r)
+            out.write(r + '\n')
             print("write: " + r)
       out.close      
 
